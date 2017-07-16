@@ -1,0 +1,35 @@
+/*
+  Создайте код, который выведет все простые числа из интервала от 2 до 10. Результат должен быть: 2, 3, 5, 7
+
+  P. S. Код также должен легко модифицироваться для любых других интервалов.
+*/
+
+var
+  min = 2,
+  max = 10,
+  isSimple = true;
+
+for (var i = min; i <= max; i++) {
+  isSimple = true;
+
+  for (var j = 2; j < i; j++) {
+    if (!(i % j)) {
+      isSimple = false;
+      break;
+    };
+  };
+
+  if (isSimple) alert (i);
+};
+
+// Готовое решение
+
+nextPrime:
+  for (var i = 2; i <= 10; i++) {
+
+    for (var j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    };
+
+    alert (i); // простое
+  };
