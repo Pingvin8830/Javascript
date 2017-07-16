@@ -1,0 +1,31 @@
+/*
+  Напишите функцию fib (n), которая возвращает n-е число Фибоначчи
+  Пример:
+    alert (fib (3)); // 2
+    alert (fib (7)); // 13
+    alert (fib (77)); // 5527939700884757
+*/
+
+function fib (n) {
+  if (n < 3) return 1;
+  return fib (n - 1) + fib (n - 2);
+};
+
+function fib1 (n) {
+  var
+    a = 1,
+    b = 1;
+  for (var i = 3; i <= n; i++) {
+    var c = a + b;
+    a = b;
+    b = c;
+  };
+  return b;
+};
+
+alert (fib (3)); // 2
+alert (fib (7)); // 13
+alert (fib1 (3)); // 2
+alert (fib1 (7)); // 13
+alert (fib1 (77)); // 5527939700884757
+
