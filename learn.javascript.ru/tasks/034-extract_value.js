@@ -1,0 +1,12 @@
+/*
+  Есть стоимость в виде строки: $120. Т. е. первым идёт знак валюты, а затем - число.
+  Создайте функцию extractCurrentValue (str), которая будет из такой строки выделять число-значение, в данном случае - 120.
+*/
+
+function extractCurrentValue (str) {
+  return +str.slice (1);
+};
+
+alert (extractCurrentValue ('$120'));
+alert (extractCurrentValue ('$120.18'));
+
