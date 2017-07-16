@@ -1,0 +1,13 @@
+/*
+  Напишите функцию randomInteger (min, max) для генерации случайного целого числа между min и max, включая min, max как возможные значения.
+  Любое число из интервала min..max должно иметь одинаковую вероятность.
+*/
+
+function randomInteger (min, max) {
+  var rand = Math.random ();
+  rand = min + rand * (max + 1 - min);
+  return Math.floor (rand);
+};
+
+alert (randomInteger (5, 12));
+
